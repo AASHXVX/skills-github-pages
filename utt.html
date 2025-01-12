@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 4 - CS4CS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            padding: 0;
+            background-color: #808000;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        form {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .section h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .personal-info {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .personal-info > div {
+            flex: 1 1 calc(33.333% - 20px);
+            min-width: 200px;
+        }
+        
+        
+        .container {
+  display: inline-block;
+  position: relative;
+  padding-left: 75px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>-MY_PAGE-</h1>
+        <p>Submit your details below:</p>
+    </header>
+
+    <form id="homeworkForm" action="desc.html" method="GET">
+        <!-- Personal Information Section -->
+        <div class="section" id="personalInfo">
+            <h2>Personal Information</h2>
+            <div class="personal-info">
+                <div>
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                </div>
+                 <div>
+                    <label for="firstName">Middle Name</label>
+                    <input type="text" id="MiddleName" name="MiddleName" placeholder="Enter your middle name" required>
+                </div>
+                <div>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                </div>
+                 <div>
+                    <label for="semester">Semester</label>
+                    <input type="number" id="semester" name="semester" placeholder="Enter your current semester" required>
+                </div>
+                <div>
+                    <label for="matriculation">Matriculation Number</label>
+                    <input type="text" id="matriculation" name="matriculation" placeholder="Enter your matriculation number" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div>
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="Germany">Germany</option>
+                        <option value="USA">USA</option>
+                        <option value="India">India</option>
+                        <option value="China">China</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="startDate">Start Date</label>
+                    <input type="date" id="startDate" name="startDate" required>
+                </div>
+                <div>
+                    <label for="program">Graduate Program</label>
+                    <select id="program" name="program" required>
+                        <option value="">Select your graduate program</option>
+                        <option value="MCS_BD&AI">Master of computer science Big data and AI</option>
+                        <option value="MCS_CS">Master of computer science Cybersecurity</option>
+                        <option value="MBA">Master of bussiness administration</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <label for="feedback">Course Feedback</label>
+        <textarea id="feedback" name="feedback" rows="5" placeholder="Write your feedback about this course..." required></textarea>
+
+        <!-- How Did You Hear About Us? -->
+      
+       <label>How did you hear about this course</label>
+
+<label class="container">Social Media
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Internet Browser<input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Newspaper <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Television<input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Other<input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+        <!-- Intentions After Completing the Course -->
+        <label for="intentions">Your intentions after completing the course</label>
+        <select id="intentions" name="intentions" required>
+            <option value="">Select your intention</option>
+            <option value="Job">Get a job in the industry</option>
+            <option value="FurtherStudies">Pursue further studies</option>
+            <option value="Entrepreneurship">Start a business</option>
+            <option value="go back to my country">Go back to my country</option>
+        </select>
+
+        
+     
+
+        <button type="submit">Submit</button>
+        <p class="error" id="errorMessage"></p>
+    </form>
+
+   
+
+    <script>
+        document.getElementById('homeworkForm').addEventListener('submit', function(event) {
+            const errorMessage = document.getElementById('errorMessage');
+            const nameRegex = /^[A-Za-z]+$/;
+            const matriculationRegex = /^[0-9]+$/;
+
+            // Clear previous error messages
+            errorMessage.textContent = '';
+
+            // Validate Name Fields
+            if (!nameRegex.test(document.getElementById('firstName').value) ||
+                !nameRegex.test(document.getElementById('lastName').value)) {
+                errorMessage.textContent = 'Name fields can only contain alphabetic characters.';
+                event.preventDefault();
+                return;
+            }
+
+            // Validate Matriculation Number
+            if (!matriculationRegex.test(document.getElementById('matriculation').value)) {
+                errorMessage.textContent = 'Matriculation number must contain only digits.';
+                event.preventDefault();
+                return;
+            }
+
+            // Everything passed validation
+            alert('Form submitted successfully!');
+        });
+    </script>
+</body>
+</html>
